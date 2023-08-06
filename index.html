@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <script src="https://kit.fontawesome.com/7dc7508359.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- Inicia player -->
+    <main class="player">
+        <video src="video/video720.mp4" poster="img/playButtonWhite.png" class="video"></video>
+        <video src="video/video720.mp4" muted class="videoFondo"></video>
+        <div class="fondoBlur"></div>
+        <!-- Inicia controls -->
+        <nav class="controls">
+            <button class="button play">
+                <i class="fas fa-play"></i>
+            </button>
+
+            <button class="button stop">
+                <i class="fa-solid fa-stop"></i>
+            </button>
+
+            <input type="range" min="0" max="100" step="0.1" value="0" class="progress">
+
+            <small class="timestamp">
+                00:00
+            </small>
+        </nav>
+        <!-- Termina controls -->
+    </main>
+    <!-- Termina player -->
+</body>
+</html>

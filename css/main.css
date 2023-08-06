@@ -1,0 +1,110 @@
+/* --------------  Inicia generales -------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --------------  Termina generales -------------- */
+
+
+/* --------------  Inicia player -------------- */
+
+.player {
+    background-color: gray;
+    box-shadow: 2px 2px 1rem black;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    max-width: 1280px;
+    min-width: 320px;
+}
+
+.video {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* --------------  Termina player -------------- */
+
+/* --------------  Inicia controls -------------- */
+
+.controls {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem
+}
+
+.controls > *:not(.timestamp) {
+    cursor: pointer;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+}
+
+.button i {
+    font-size: 2rem;
+}
+
+.progress {
+    flex-grow: 1;
+}
+
+.progress{
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    background-image: linear-gradient(red, red);
+    background-repeat: no-repeat;
+    background-size: 0;
+    width: 200px;
+    height: 7px;
+    transition: background-size .1s ease-in-out;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: red;
+    box-shadow: -2px 0 10px 2px #555;
+}
+
+.timestamp {
+    font-size: 1.2rem;
+}
+
+/* --------------  Termina controls -------------- */
+
+/* --------------  Inicia videoFondo -------------- */
+
+.videoFondo, .fondoBlur {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.fondoBlur {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* --------------  Termina videoFondo -------------- */
